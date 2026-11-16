@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#09051c"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%232ef8ff' d='M50 2 98 50 50 98 2 50z'/%3E%3Cpath fill='%23ff38d1' d='M50 15 85 50 50 85 15 50z'/%3E%3Ccircle cx='50' cy='50' r='12' fill='%23fff'/%3E%3C/svg%3E">
+<title>CHROMA CASCADE — PRISMCORE PANIC</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar"><div class="brand"><span class="brand-mark">✦</span><div><div class="brand-name">CHROMA <b>CASCADE</b></div><div class="brand-sub">PRISMCORE PANIC // SPECTRUM DEFENSE</div></div></div><div class="top-meta"><span class="live-dot"></span> REACTOR ONLINE <span class="build-tag">BUILD 07</span></div></header>
+  <main class="layout">
+    <section class="arena-wrap">
+      <div class="arena-head"><div><div class="eyebrow">SECTOR 09 · THE LUMEN VAULT</div><h1>PRISMCORE <span>UNDER SIEGE</span></h1></div><div class="wave-pill"><small>WAVE</small><strong id="wave">01</strong></div></div>
+      <div class="canvas-frame"><canvas id="game" aria-label="Chroma Cascade game arena"></canvas>
+        <div class="mission-overlay" id="mission"><div class="overlay-kicker">✦ EMERGENCY SPECTRUM ALERT ✦</div><h2>THE VOID IS<br><span>DRINKING THE LIGHT.</span></h2><p>Rotate the Prism Core. Match each intruder's color. Chain the spectrum before the vault goes dark.</p><div class="mini-rules"><span><i class="dot cyan"></i> CYAN</span><span><i class="dot pink"></i> MAGENTA</span><span><i class="dot gold"></i> AMBER</span><span><i class="dot lime"></i> LIME</span></div><button id="start" class="primary-btn">IGNITE THE PRISM <b>↗</b></button><div class="overlay-foot">A / D OR ← / → ROTATE · SPACE OVERDRIVE · TAP THE CORE</div></div>
+        <div class="pause-chip" id="pauseChip">PAUSED</div>
+        <div class="result-overlay hidden" id="result"><div class="overlay-kicker" id="resultKicker">SPECTRUM STABLE</div><h2 id="resultTitle">VAULT SAVED</h2><p id="resultText">The light survives.</p><button id="again" class="primary-btn">RUN IT BACK ↻</button></div>
+        <div class="draft-overlay hidden" id="draft"><div class="overlay-kicker">REACTOR EVOLUTION // CHOOSE ONE</div><h2>AMPLIFY YOUR <span>LIGHT</span></h2><div class="draft-cards" id="draftCards"></div></div>
+      </div>
+      <div class="arena-foot"><span><kbd>A</kbd><kbd>D</kbd> ROTATE PRISM</span><span><kbd>SPACE</kbd> SPECTRUM BURST</span><span><kbd>P</kbd> PAUSE</span><span class="foot-right">MATCH COLOR → CHAIN REACTION</span></div>
+    </section>
+    <aside class="hud">
+      <div class="hud-card score-card"><div class="hud-label">SPECTRUM SCORE <span>✦</span></div><div class="score" id="score">000000</div><div class="score-bottom"><span>BEST <b id="best">000000</b></span><span class="combo" id="combo">COMBO ×1</span></div></div>
+      <div class="hud-card core-card"><div class="hud-label">PRISMCORE INTEGRITY <span class="status-live">● LIVE</span></div><div class="health-row"><strong id="health">100</strong><small>%</small><span class="health-caption">LUMEN SHIELD</span></div><div class="health-track"><i id="healthBar"></i></div><div class="core-stats"><span>OVERDRIVE <b id="charge">READY</b></span><span>LEVEL <b id="level">01</b></span></div></div>
+      <div class="hud-card spectrum-card"><div class="hud-label">ACTIVE SPECTRUM</div><div class="spectrum-wheel" id="wheel"><div class="wheel-center">✦</div><i class="wheel-ray r1"></i><i class="wheel-ray r2"></i><i class="wheel-ray r3"></i></div><div class="spectrum-name" id="spectrumName">CYAN // PHASE 01</div><div class="spectrum-help">ROTATE TO MATCH INCOMING COLORS</div></div>
+      <div class="hud-card threat-card"><div class="hud-label">VOID SIGNATURES <span id="threatCount">00</span></div><div class="threat-list"><span><i class="dot cyan"></i> PRISM WRAITH <b id="cyanCount">0</b></span><span><i class="dot pink"></i> HEX PHANTOM <b id="pinkCount">0</b></span><span><i class="dot gold"></i> SOLAR MITE <b id="goldCount">0</b></span><span><i class="dot lime"></i> BIO LEECH <b id="limeCount">0</b></span><span><i class="dot violet"></i> VOID SHADE <b id="violetCount">0</b></span></div><div class="threat-warning" id="warning">NO BREACH DETECTED</div></div>
+      <div class="hud-card objective-card"><div class="hud-label">MISSION DIRECTIVE</div><div class="objective-title">KEEP THE VAULT LIT</div><p>Survive 90 seconds and erase the VOID EMPEROR.</p><div class="progress-track"><i id="progress"></i></div><div class="progress-label"><span id="time">00:00</span><span>01:30</span></div><div class="winlose"><span>✦ WIN: BOSS ERASED</span><span>✕ LOSE: CORE SHATTERED</span></div></div>
+      <button class="sound-btn" id="sound">♫ SOUND ON</button>
+    </aside>
+  </main>
+  <footer class="footer"><span>CHROMA CASCADE <b>© 2026</b></span><span>EVERY COLOR IS A WEAPON.</span><span>NO SIGNAL. NO MERCY. ALL SPECTRUM.</span></footer>
+</div><script type="module" src="main.js"></script></body></html>
